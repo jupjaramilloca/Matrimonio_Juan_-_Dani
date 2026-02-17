@@ -6,9 +6,9 @@
   
   <meta property="og:title" content="¡Estás invitado a nuestra boda! 💍">
   <meta property="og:description" content="Juan Pablo & Daniela: Nos encantaría compartir este día tan especial contigo. Haz clic para ver tu invitación.">
-  
-  <meta property="og:image" content="https://jupjaramilloca.github.io/Matrimonio_Juan_-_Dani/nosotros.jpg">
-  
+  <meta property="og:image" content="D&J.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jupjaramilloca.github.io/Matrimonio_Juan_-_Dani/">
 
@@ -43,9 +43,17 @@
     
     .hero-container {
       background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
-                  url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600');
+                  url('nosotros.jpg');
       background-size: cover;
       background-position: center;
+    }
+
+    .bg-wedding-custom {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('fondoA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
 
     #sticky-timer {
@@ -60,7 +68,6 @@
     .timer-val { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--bronze); font-weight: 700; }
     .timer-label { font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; display: block; }
 
-    .dress-code-img { height: 110px; filter: sepia(1) saturate(1.5) brightness(0.8); }
     .btn-action { background: var(--charcoal); color: white; padding: 1rem 2rem; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--charcoal); text-decoration: none; display: inline-block; }
   </style>
 </head>
@@ -79,8 +86,8 @@
     </div>
     
     <div class="space-y-4">
-        <p class="font-title text-[9px] tracking-[0.4em] uppercase opacity-70">Tienen el placer de invitarte a su boda</p>
-        <h1 class="font-title text-3xl md:text-6xl leading-tight tracking-tighter">Juan Pablo Jaramillo <br>& Daniela Henao</h1>
+        <p class="font-title text-[9px] tracking-[0.4em] uppercase opacity-70">Tenemos el placer de invitarte a nuestra boda</p>
+        <h1 class="font-title text-3xl md:text-6xl leading-tight tracking-tighter">Daniela<br>& Juan Pablo</h1>
         <div class="h-px bg-[#B39D5A] w-16 mx-auto my-6"></div>
         <p class="font-bodoni italic text-xl md:text-2xl leading-relaxed max-w-xs mx-auto text-stone-200">
           "El amor no necesita ser perfecto, solo necesita ser real."
@@ -96,41 +103,49 @@
   <section class="block-screen bg-white text-charcoal px-4 text-center">
     <div class="max-w-4xl w-full grid grid-cols-2 gap-4 items-start">
       <div class="space-y-4 border-r border-stone-100 pr-2">
-        <p class="font-title text-[8px] tracking-[0.3em] text-stone-400 uppercase font-bold">Ceremonia</p>
-        <h3 class="font-bodoni text-lg md:text-2xl leading-tight h-12 flex items-center justify-center">P. Nuestra Señora del Chiquinquirá</h3>
+        <p class="font-title text-[10px] md:text-[12px] tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Ceremonia</p>
+        <h3 class="font-bodoni text-lg md:text-2xl leading-tight h-12 flex items-center justify-center">Parroquia Nuestra Señora de Chiquinquirá</h3>
         <p class="font-bodoni text-4xl md:text-6xl text-[#B39D5A]">14:00</p>
-        <p class="text-[8px] uppercase tracking-tighter text-stone-400">El Tablazo, Rionegro</p>
-        <a href="https://maps.google.com" target="_blank" class="inline-block mt-2 border-b border-charcoal text-[8px] tracking-widest uppercase pb-1">Ver Mapa</a>
+        <p class="text-[8px] uppercase tracking-tighter text-stone-400">Rionegro, Antioquia</p>
+        <a href="https://maps.app.goo.gl/P6J6J" target="_blank" class="inline-block mt-2 border-b border-charcoal text-[8px] tracking-widest uppercase pb-1">Ver Mapa</a>
       </div>
       <div class="space-y-4 pl-2">
-        <p class="font-title text-[8px] tracking-[0.3em] text-stone-400 uppercase font-bold">Recepción</p>
-        <h3 class="font-bodoni text-lg md:text-2xl leading-tight h-12 flex items-center justify-center">Lugar "Con Tu Amor"</h3>
+        <p class="font-title text-[10px] md:text-[12px] tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Recepción</p>
+        <h3 class="font-bodoni text-lg md:text-2xl leading-tight h-12 flex items-center justify-center">Con Tu Amor Casa Campestre</h3>
         <p class="font-bodoni text-4xl md:text-6xl text-[#B39D5A]">16:00</p>
-        <p class="text-[8px] uppercase tracking-tighter text-stone-400">Antioquia, Colombia</p>
-        <a href="https://maps.google.com" target="_blank" class="inline-block mt-2 border-b border-charcoal text-[8px] tracking-widest uppercase pb-1">Ver Mapa</a>
+        <p class="text-[8px] uppercase tracking-tighter text-stone-400">Rionegro, Antioquia</p>
+        <a href="https://maps.app.goo.gl/Q7K7K" target="_blank" class="inline-block mt-2 border-b border-charcoal text-[8px] tracking-widest uppercase pb-1">Ver Mapa</a>
       </div>
     </div>
   </section>
 
-  <section class="block-screen bg-[#474747] text-[#F8F6F1] px-8 text-center">
-    <h4 class="font-title text-[9px] tracking-[0.6em] mb-10 uppercase text-[#B39D5A] font-bold">Código de Vestimenta</h4>
-    <div class="flex items-center justify-center gap-8 mb-8">
-        <img src="https://cdn-icons-png.flaticon.com/512/3534/3534312.png" class="dress-code-img" alt="Traje">
-        <img src="https://cdn-icons-png.flaticon.com/512/1054/1054817.png" class="dress-code-img" alt="Vestido">
+  <section class="block-screen bg-wedding-custom text-white px-4 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/40 z-0"></div>
+    <div class="max-w-4xl w-full grid grid-cols-2 gap-0 items-center relative z-10">
+      <div class="space-y-4 border-r border-white/20 pr-6 text-center">
+        <p class="font-title text-[10px] md:text-[12px] tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Código de Vestuario</p>
+        <h3 class="font-bodoni text-3xl md:text-5xl text-white italic leading-tight">Semi Formal</h3>
+      </div>
+      <div class="space-y-4 pl-6 text-center">
+        <p class="font-title text-[10px] md:text-[12px] tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Detalle de Regalo</p>
+        <h3 class="font-bodoni text-3xl md:text-5xl text-white italic leading-tight">Lluvia de Sobres</h3>
+      </div>
     </div>
-    <p class="font-bodoni text-5xl md:text-7xl italic mb-2">Formal</p>
-    <p class="text-[9px] tracking-[0.2em] uppercase opacity-70">Traje Completo / Vestido de Gala</p>
   </section>
 
-  <section class="block-screen bg-white px-4 text-center">
-    <h3 class="font-title text-xl mb-6 tracking-[0.4em] uppercase font-bold text-charcoal">Confirmación</h3>
-    <div class="w-full h-[70vh] rounded-sm shadow-xl border border-stone-50 overflow-hidden">
-        <iframe id="form-iframe" src="" width="100%" height="100%" frameborder="0">Cargando...</iframe>
-    </div>
+  <section class="block-screen bg-white px-4 py-20 text-center flex flex-col items-center justify-center">
+    <h3 class="font-title text-xl mb-2 tracking-[0.4em] uppercase font-bold text-charcoal">Asistencia</h3>
+    <div class="w-12 h-[1px] bg-[#B39D5A] mb-8"></div>
+    <p class="font-bodoni italic text-lg text-charcoal/70 mb-10 max-w-sm mx-auto leading-relaxed">
+      Para nosotros es muy importante contar con tu presencia. Por favor, confírmanos haciendo clic en el botón:
+    </p>
+    <a id="btn-whatsapp" href="#" target="_blank" class="inline-block px-10 py-4 bg-[#25D366] text-white transition-all duration-300 tracking-[0.2em] uppercase text-xs font-bold rounded-full shadow-lg hover:scale-105">
+      Confirmar por WhatsApp
+    </a>
   </section>
 
   <section class="block-screen bg-[#222] text-[#F8F6F1] px-8 text-center">
-    <h3 class="font-title text-[8px] tracking-[1em] mb-8 uppercase opacity-40">Nuestros Recuerdos</h3>
+    <h3 class="font-title text-[12px] tracking-[1em] mb-8 uppercase opacity-40">Nuestros Recuerdos</h3>
     <p class="font-bodoni text-xl italic mb-8">Ayúdanos a capturar los mejores momentos de nuestra historia.</p>
     <div class="p-4 bg-white mb-8 shadow-2xl inline-block rounded-sm">
         <img id="qr-gen" src="" class="w-28 h-28" alt="QR Code">
@@ -146,12 +161,10 @@
   <script>
     const DATA = {
         fechaBoda: new Date("May 17, 2026 14:00:00").getTime(),
-        form: "https://docs.google.com/forms/d/e/1FAIpQLSfyDTRvVu2NQtPDkgTqcvPbc0VLyUnvpthh2dnlVkhLolrILA/viewform",
-        entry: "entry.123456789", 
-        drive: "https://drive.google.com/drive/folders/13n4w-Jtj0VVjHeWPZztVVYqjqV8XmyTl?usp=sharing"
+        drive: "https://drive.google.com/drive/folders/13n4w-Jtj0VVjHeWPZztVVYqjqV8XmyTl?usp=sharing",
+        telefono: "573113419253"
     };
 
-    // Función del Timer
     function updateTimer() {
         const ahora = new Date().getTime();
         const diff = DATA.fechaBoda - ahora;
@@ -166,28 +179,26 @@
         setInterval(updateTimer, 1000);
         updateTimer();
 
-        // Sticky Timer
         window.addEventListener('scroll', () => {
             const sticky = document.getElementById('sticky-timer');
             if (window.scrollY > 400) sticky.classList.add('visible');
             else sticky.classList.remove('visible');
         });
 
-        // Lógica de Personalización
         const urlParams = new URLSearchParams(window.location.search);
         const nameParam = urlParams.get('n');
-        let rsvpUrl = DATA.form + "?embedded=true";
+        const cleanName = nameParam ? decodeURIComponent(nameParam).replace(/\+/g, ' ') : "Invitado";
 
         if (nameParam) {
-            const cleanName = decodeURIComponent(nameParam).replace(/\+/g, ' ');
             document.getElementById('guest-name').innerText = cleanName;
             document.getElementById('guest-box').style.opacity = "1";
-            // Pre-llenar el formulario si tienes el ID del campo (entry)
-            rsvpUrl = `${DATA.form}?usp=pp_url&${DATA.entry}=${encodeURIComponent(cleanName)}&embedded=true`;
         }
 
-        // Cargar links finales
-        document.getElementById('form-iframe').src = rsvpUrl;
+        // Configuración WhatsApp
+        const mensaje = `¡Hola Juan Pablo y Daniela! Soy ${cleanName}. Confirmo con mucha alegría mi asistencia a su boda. 🥂`;
+        document.getElementById('btn-whatsapp').href = `https://api.whatsapp.com/send?phone=${DATA.telefono}&text=${encodeURIComponent(mensaje)}`;
+
+        // Links de recuerdos
         document.getElementById('btn-upload').href = DATA.drive;
         document.getElementById('qr-gen').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(DATA.drive)}&color=474747`;
     };
