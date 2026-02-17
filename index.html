@@ -1,207 +1,235 @@
 <!doctype html>
 <html lang="es" class="h-full">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta property="og:title" content="¡Estás invitado a nuestra boda! 💍">
-<meta property="og:description" content="Juan Pablo & Daniela: Nos encantaría compartir este día tan especial contigo. Haz clic para ver tu invitación.">
+<meta property="og:description" content="Juan Pablo & Daniela: Nos encantaría compartir este día tan especial contigo.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jupjaramilloca.github.io/Matrimonio_Juan_-_Dani/">
-
 <meta property="og:image" content="https://jupjaramilloca.github.io/Matrimonio_Juan_-_Dani/final-boda.png?v=2">
-<meta property="og:image:secure_url" content="https://jupjaramilloca.github.io/Matrimonio_Juan_-_Dani/final-boda.png?v=2">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/png">
 
-  <title>Boda Juan Pablo & Daniela</title>
-  
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <style>
+<title>Boda Juan Pablo & Daniela</title>
+
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
     :root {
-      --charcoal: #474747;
-      --bronze: #B39D5A;
-      --cream: #F8F6F1;
+        --charcoal: #474747;
+        --bronze: #B39D5A;
+        --cream: #F8F6F1;
     }
     
     html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif; background-color: var(--cream); color: var(--charcoal); margin: 0; }
+    body { font-family: 'Montserrat', sans-serif; background-color: var(--cream); color: var(--charcoal); margin: 0; overflow-x: hidden; }
     
     .font-title { font-family: 'Cinzel', serif; }
     .font-bodoni { font-family: 'Bodoni Moda', serif; }
 
     .block-screen { 
-      min-height: 100vh; 
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-      justify-content: center; 
-      scroll-snap-align: start; 
-      position: relative;
-      padding: 1.5rem;
+        min-height: 100vh; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        scroll-snap-align: start; 
+        position: relative;
+        padding: 2rem;
+        z-index: 10;
     }
     
     .hero-container {
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
-                  url('nosotros.jpg');
-      background-size: cover;
-      background-position: center;
+        background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('nosotros.jpg');
+        background-size: cover;
+        background-position: center;
     }
 
     .bg-wedding-custom {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                  url('fondoA.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fondoA.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
     #sticky-timer {
-      position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.98);
-      z-index: 50; padding: 10px 0; border-bottom: 1px solid var(--bronze);
-      display: flex; justify-content: center; gap: 20px;
-      transform: translateY(-100%); transition: transform 0.5s ease-in-out;
+        position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.98);
+        z-index: 100; padding: 10px 0; border-bottom: 1px solid var(--bronze);
+        display: flex; justify-content: center; gap: 20px;
+        transform: translateY(-100%); transition: transform 0.5s ease-in-out;
     }
     #sticky-timer.visible { transform: translateY(0); }
 
-    .timer-unit { text-align: center; }
-    .timer-val { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--bronze); font-weight: 700; }
-    .timer-label { font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; display: block; }
+    .timer-val { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--bronze); font-weight: 700; }
+    .timer-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; display: block; }
 
-    .btn-action { background: var(--charcoal); color: white; padding: 1rem 2rem; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--charcoal); text-decoration: none; display: inline-block; }
-  </style>
+    /* Ajuste de Proporciones tipo Prometheus */
+    h1 { font-size: 2.5rem !important; line-height: 1.1 !important; }
+    @media (min-width: 768px) { h1 { font-size: 5rem !important; } }
+
+    .btn-action { 
+        background: var(--charcoal); 
+        color: white; 
+        padding: 1.2rem 2.5rem; 
+        text-transform: uppercase; 
+        letter-spacing: 0.2em; 
+        font-size: 0.8rem; 
+        font-weight: 700; 
+        text-decoration: none; 
+        display: inline-block;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* EFECTO REVELACIÓN FINAL */
+    .reveal-footer {
+        position: sticky;
+        bottom: 0;
+        height: 250px;
+        background-color: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+        text-align: center;
+        padding: 2rem;
+    }
+    .shadow-bottom { box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+
+</style>
 </head>
 <body class="antialiased">
 
-  <div id="sticky-timer">
-    <div class="timer-unit"><span id="s-days" class="timer-val">00</span><span class="timer-label">Días</span></div>
-    <div class="timer-unit"><span id="s-hours" class="timer-val">00</span><span class="timer-label">Horas</span></div>
-    <div class="timer-unit"><span id="s-mins" class="timer-val">00</span><span class="timer-label">Mins</span></div>
-  </div>
-
-  <section class="block-screen hero-container text-white px-8 text-center" id="hero-section">
-    <div id="guest-box" class="mb-6 opacity-0 transition-opacity duration-1000">
-        <p class="font-bodoni italic text-xl md:text-2xl mb-1 text-[#B39D5A]">Estimados,</p>
-        <h2 id="guest-name" class="font-title text-2xl md:text-4xl tracking-widest border-b border-white/30 inline-block pb-2">Invitado</h2>
+    <div id="sticky-timer">
+        <div class="text-center"><span id="s-days" class="timer-val">00</span><span class="timer-label">Días</span></div>
+        <div class="text-center"><span id="s-hours" class="timer-val">00</span><span class="timer-label">Horas</span></div>
+        <div class="text-center"><span id="s-mins" class="timer-val">00</span><span class="timer-label">Mins</span></div>
     </div>
-    
-    <div class="space-y-4">
-        <p class="font-title text-[9px] tracking-[0.4em] uppercase opacity-70">Tenemos el placer de invitarte a nuestra boda</p>
-        <h1 class="font-title text-3xl md:text-6xl leading-tight tracking-tighter">Daniela<br>& Juan Pablo</h1>
-        <div class="h-px bg-[#B39D5A] w-16 mx-auto my-6"></div>
-        <p class="font-bodoni italic text-xl md:text-2xl leading-relaxed max-w-xs mx-auto text-stone-200">
-          "El amor no necesita ser perfecto, solo necesita ser real."
+
+    <section class="block-screen hero-container text-white px-8 text-center">
+        <div id="guest-box" class="mb-6 opacity-0 transition-opacity duration-1000">
+            <p class="font-bodoni italic text-2xl mb-1 text-[#B39D5A]">Estimados,</p>
+            <h2 id="guest-name" class="font-title text-3xl tracking-widest border-b border-white/30 inline-block pb-2">Invitado</h2>
+        </div>
+        
+        <div class="space-y-6">
+            <p class="font-title text-[10px] tracking-[0.4em] uppercase opacity-70">Tenemos el placer de invitarte a nuestra boda</p>
+            <h1 class="font-title tracking-tighter">Daniela<br>& Juan Pablo</h1>
+            <div class="h-px bg-[#B39D5A] w-20 mx-auto my-6"></div>
+            <p class="font-bodoni italic text-xl md:text-3xl leading-relaxed max-w-sm mx-auto text-stone-200">
+                "El amor no necesita ser perfecto, solo necesita ser real."
+            </p>
+            <p class="font-title text-lg tracking-[0.5em] text-[#B39D5A] uppercase pt-4">17 . Mayo . 2026</p>
+        </div>
+    </section>
+
+    <section class="block-screen bg-white text-charcoal px-6 text-center">
+        <div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div class="space-y-4 md:border-r border-stone-100 md:pr-6">
+                <p class="font-title text-xs tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Ceremonia</p>
+                <h3 class="font-bodoni text-2xl leading-tight min-h-[60px] flex items-center justify-center">Parroquia Nuestra Señora de Chiquinquirá</h3>
+                <p class="font-bodoni text-5xl md:text-7xl text-[#B39D5A]">14:00</p>
+                <p class="text-[10px] uppercase tracking-widest text-stone-400">Rionegro, Antioquia</p>
+                <a href="https://maps.google.com" target="_blank" class="inline-block mt-4 border-b border-charcoal text-[10px] tracking-widest uppercase pb-1">Ver Mapa</a>
+            </div>
+            <div class="space-y-4 md:pl-6">
+                <p class="font-title text-xs tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Recepción</p>
+                <h3 class="font-bodoni text-2xl leading-tight min-h-[60px] flex items-center justify-center">Con Tu Amor Casa Campestre</h3>
+                <p class="font-bodoni text-5xl md:text-7xl text-[#B39D5A]">16:00</p>
+                <p class="text-[10px] uppercase tracking-widest text-stone-400">Rionegro, Antioquia</p>
+                <a href="https://maps.google.com" target="_blank" class="inline-block mt-4 border-b border-charcoal text-[10px] tracking-widest uppercase pb-1">Ver Mapa</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block-screen bg-wedding-custom text-white px-6 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/40 z-0"></div>
+        <div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-4 md:border-r border-white/20 md:pr-10 text-center">
+                <p class="font-title text-xs tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Código de Vestuario</p>
+                <h3 class="font-bodoni text-4xl md:text-6xl text-white italic">Semi Formal</h3>
+            </div>
+            <div class="space-y-4 md:pl-10 text-center">
+                <p class="font-title text-xs tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Detalle de Regalo</p>
+                <h3 class="font-bodoni text-4xl md:text-6xl text-white italic">Lluvia de Sobres</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="block-screen bg-white px-8 text-center">
+        <h3 class="font-title text-2xl mb-2 tracking-[0.4em] uppercase font-bold text-charcoal">Asistencia</h3>
+        <div class="w-16 h-[1px] bg-[#B39D5A] mb-8 mx-auto"></div>
+        <p class="font-bodoni italic text-xl text-charcoal/70 mb-10 max-w-sm mx-auto leading-relaxed">
+            Para nosotros es muy importante contar con tu presencia. Por favor, confírmanos haciendo clic:
         </p>
-        <p class="font-title text-md tracking-[0.5em] text-[#B39D5A] uppercase pt-4">17 . Mayo . 2026</p>
+        <a id="btn-whatsapp" href="#" target="_blank" class="btn-action !bg-[#25D366] !border-[#25D366] rounded-full shadow-lg">
+            Confirmar WhatsApp
+        </a>
+    </section>
+
+    <section class="block-screen bg-wedding-custom text-white px-8 text-center shadow-bottom">
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+        <div class="relative z-10 w-full max-w-2xl mx-auto">
+            <h3 class="font-title text-xs tracking-[1em] mb-8 uppercase text-[#B39D5A] font-bold">Nuestros Recuerdos</h3>
+            <p class="font-bodoni text-2xl italic mb-8">Ayúdanos a capturar los mejores momentos.</p>
+            <div class="p-4 bg-white mb-8 shadow-2xl inline-block rounded-sm">
+                <img id="qr-gen" src="" class="w-32 h-32" alt="QR Code">
+            </div>
+            <br>
+            <a id="btn-upload" href="#" target="_blank" class="btn-action !bg-white !text-black">Subir Fotos</a>
+        </div>
+    </section>
+
+    <div class="reveal-footer">
+        <p class="font-bodoni italic text-3xl md:text-5xl text-white mb-4">¡Te esperamos pronto!</p>
+        <div class="space-y-2">
+            <p class="font-title text-xs tracking-[0.5em] uppercase text-[#B39D5A]">Juan Pablo y Daniela</p>
+            <p class="font-title text-[9px] tracking-[0.3em] uppercase opacity-40 text-white">Rionegro - Antioquia 2026</p>
+        </div>
     </div>
 
-    <div class="absolute bottom-6 animate-bounce opacity-40">
-        <p class="text-[7px] tracking-[0.3em] uppercase">Desliza para los detalles</p>
-    </div>
-  </section>
+    <script>
+        const DATA = {
+            fechaBoda: new Date("May 17, 2026 14:00:00").getTime(),
+            drive: "https://drive.google.com/drive/folders/13n4w-Jtj0VVjHeWPZztVVYqjqV8XmyTl?usp=sharing",
+            telefono: "573113419253"
+        };
 
-  <section class="block-screen bg-white text-charcoal px-4 text-center">
-    <div class="max-w-4xl w-full grid grid-cols-2 gap-4 items-start">
-      <div class="space-y-4 border-r border-stone-100 pr-2">
-        <p class="font-title text-[10px] md:text-[12px] tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Ceremonia</p>
-        <h3 class="font-bodoni text-lg md:text-2xl leading-tight h-12 flex items-center justify-center">Parroquia Nuestra Señora de Chiquinquirá</h3>
-        <p class="font-bodoni text-4xl md:text-6xl text-[#B39D5A]">14:00</p>
-        <p class="text-[8px] uppercase tracking-tighter text-stone-400">Rionegro, Antioquia</p>
-        <a href="https://maps.app.goo.gl/P6J6J" target="_blank" class="inline-block mt-2 border-b border-charcoal text-[8px] tracking-widest uppercase pb-1">Ver Mapa</a>
-      </div>
-      <div class="space-y-4 pl-2">
-        <p class="font-title text-[10px] md:text-[12px] tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Recepción</p>
-        <h3 class="font-bodoni text-lg md:text-2xl leading-tight h-12 flex items-center justify-center">Con Tu Amor Casa Campestre</h3>
-        <p class="font-bodoni text-4xl md:text-6xl text-[#B39D5A]">16:00</p>
-        <p class="text-[8px] uppercase tracking-tighter text-stone-400">Rionegro, Antioquia</p>
-        <a href="https://maps.app.goo.gl/Q7K7K" target="_blank" class="inline-block mt-2 border-b border-charcoal text-[8px] tracking-widest uppercase pb-1">Ver Mapa</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="block-screen bg-wedding-custom text-white px-4 flex items-center justify-center">
-    <div class="absolute inset-0 bg-black/40 z-0"></div>
-    <div class="max-w-4xl w-full grid grid-cols-2 gap-0 items-center relative z-10">
-      <div class="space-y-4 border-r border-white/20 pr-6 text-center">
-        <p class="font-title text-[10px] md:text-[12px] tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Código de Vestuario</p>
-        <h3 class="font-bodoni text-3xl md:text-5xl text-white italic leading-tight">Semi Formal</h3>
-      </div>
-      <div class="space-y-4 pl-6 text-center">
-        <p class="font-title text-[10px] md:text-[12px] tracking-[0.3em] text-[#B39D5A] uppercase font-bold">Detalle de Regalo</p>
-        <h3 class="font-bodoni text-3xl md:text-5xl text-white italic leading-tight">Lluvia de Sobres</h3>
-      </div>
-    </div>
-  </section>
-
-  <section class="block-screen bg-white px-4 py-20 text-center flex flex-col items-center justify-center">
-    <h3 class="font-title text-xl mb-2 tracking-[0.4em] uppercase font-bold text-charcoal">Asistencia</h3>
-    <div class="w-12 h-[1px] bg-[#B39D5A] mb-8"></div>
-    <p class="font-bodoni italic text-lg text-charcoal/70 mb-10 max-w-sm mx-auto leading-relaxed">
-      Para nosotros es muy importante contar con tu presencia. Por favor, confírmanos haciendo clic en el botón:
-    </p>
-    <a id="btn-whatsapp" href="#" target="_blank" class="inline-block px-10 py-4 bg-[#25D366] text-white transition-all duration-300 tracking-[0.2em] uppercase text-xs font-bold rounded-full shadow-lg hover:scale-105">
-      Confirmar por WhatsApp
-    </a>
-  </section>
-
-  <section class="block-screen bg-[#222] text-[#F8F6F1] px-8 text-center">
-    <h3 class="font-title text-[12px] tracking-[1em] mb-8 uppercase opacity-40">Nuestros Recuerdos</h3>
-    <p class="font-bodoni text-xl italic mb-8">Ayúdanos a capturar los mejores momentos de nuestra historia.</p>
-    <div class="p-4 bg-white mb-8 shadow-2xl inline-block rounded-sm">
-        <img id="qr-gen" src="" class="w-28 h-28" alt="QR Code">
-    </div>
-    <br>
-    <a id="btn-upload" href="#" target="_blank" class="btn-action w-full max-w-xs shadow-xl">Subir Fotos</a>
-  </section>
-
-  <footer class="py-10 text-center font-title text-[8px] tracking-[1.2em] text-stone-500 uppercase opacity-40">
-    Juan Pablo Jaramillo & Daniela Henao — 2026
-  </footer>
-
-  <script>
-    const DATA = {
-        fechaBoda: new Date("May 17, 2026 14:00:00").getTime(),
-        drive: "https://drive.google.com/drive/folders/13n4w-Jtj0VVjHeWPZztVVYqjqV8XmyTl?usp=sharing",
-        telefono: "573113419253"
-    };
-
-    function updateTimer() {
-        const ahora = new Date().getTime();
-        const diff = DATA.fechaBoda - ahora;
-        if(diff > 0) {
-            document.getElementById('s-days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-            document.getElementById('s-hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById('s-mins').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        }
-    }
-
-    window.onload = function() {
-        setInterval(updateTimer, 1000);
-        updateTimer();
-
-        window.addEventListener('scroll', () => {
-            const sticky = document.getElementById('sticky-timer');
-            if (window.scrollY > 400) sticky.classList.add('visible');
-            else sticky.classList.remove('visible');
-        });
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const nameParam = urlParams.get('n');
-        const cleanName = nameParam ? decodeURIComponent(nameParam).replace(/\+/g, ' ') : "Invitado";
-
-        if (nameParam) {
-            document.getElementById('guest-name').innerText = cleanName;
-            document.getElementById('guest-box').style.opacity = "1";
+        function updateTimer() {
+            const ahora = new Date().getTime();
+            const diff = DATA.fechaBoda - ahora;
+            if(diff > 0) {
+                document.getElementById('s-days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+                document.getElementById('s-hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById('s-mins').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            }
         }
 
-        // Configuración WhatsApp
-        const mensaje = `¡Hola Juan Pablo y Daniela! Soy ${cleanName}. Confirmo con mucha alegría mi asistencia a su boda. 🥂`;
-        document.getElementById('btn-whatsapp').href = `https://api.whatsapp.com/send?phone=${DATA.telefono}&text=${encodeURIComponent(mensaje)}`;
+        window.onload = function() {
+            setInterval(updateTimer, 1000);
+            updateTimer();
 
-        // Links de recuerdos
-        document.getElementById('btn-upload').href = DATA.drive;
-        document.getElementById('qr-gen').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(DATA.drive)}&color=474747`;
-    };
-  </script>
+            window.addEventListener('scroll', () => {
+                const sticky = document.getElementById('sticky-timer');
+                if (window.scrollY > 400) sticky.classList.add('visible');
+                else sticky.classList.remove('visible');
+            });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const cleanName = urlParams.get('n') ? decodeURIComponent(urlParams.get('n')).replace(/\+/g, ' ') : "Invitado";
+
+            if (urlParams.get('n')) {
+                document.getElementById('guest-name').innerText = cleanName;
+                document.getElementById('guest-box').style.opacity = "1";
+            }
+
+            const mensaje = `¡Hola Juan Pablo y Daniela! Soy ${cleanName}. Confirmo mi asistencia.`;
+            document.getElementById('btn-whatsapp').href = `https://api.whatsapp.com/send?phone=${DATA.telefono}&text=${encodeURIComponent(mensaje)}`;
+            document.getElementById('btn-upload').href = DATA.drive;
+            document.getElementById('qr-gen').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(DATA.drive)}&color=474747`;
+        };
+    </script>
 </body>
 </html>
