@@ -224,7 +224,7 @@
                 document.getElementById('guest-box').style.opacity = "1";
             }
 
-            const mensaje = `¡Hola Juan Pablo y Daniela! Soy ${cleanName}. Confirmo mi asistencia.`;
+            const mensaje = `¡Hola Dani y JuanPa! Soy ${cleanName}. Confirmo mi asistencia. 🥂`;
             document.getElementById('btn-whatsapp').href = `https://api.whatsapp.com/send?phone=${DATA.telefono}&text=${encodeURIComponent(mensaje)}`;
             document.getElementById('btn-upload').href = DATA.drive;
             document.getElementById('qr-gen').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(DATA.drive)}&color=474747`;
